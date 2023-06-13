@@ -6,7 +6,7 @@ test:
     - secure
   variables:
     SECURE_FILES_DOWNLOAD_PATH: './where/files/should/go/'
-    UAT_USER: ''
+    UAT_USER: 'test'
   script:
     - curl --silent "https://gitlab.com/gitlab-org/incubation-engineering/mobile-devops/download-secure-files/-/raw/main/installer" | bash
     - ls where/files/should/go/
