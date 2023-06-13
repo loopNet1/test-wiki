@@ -12,6 +12,7 @@ test:
     - curl --header "PRIVATE-TOKEN:glpat-PH3fib_xYsKxR4mvMmCH" "https://gitlab.com/api/v4/projects/1/where/files/should/go/secure_files"
     - cat where/files/should/go/secure_file
     - a=$(cat where/files/should/go/secure_file)
+    - JOB_VAR=$a
     - echo $a
 
   
