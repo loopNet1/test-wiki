@@ -4,13 +4,14 @@ stages:
 test:
   variables:
     SECURE_FILES_DOWNLOAD_PATH: './where/files/should/go/'
-    JOB_VAR: 'cat where/files/should/go/secure_file'
+    JOB_VAR: cat where/files/should/go/secure_file
   script:
     - curl --silent "https://gitlab.com/gitlab-org/incubation-engineering/mobile-devops/download-secure-files/-/raw/main/installer" | bash
     - ls where/files/should/go/
     # - curl --header "PRIVATE-TOKEN:glpat-PH3fib_xYsKxR4mvMmCH" "https://gitlab.com/api/v4/projects/1/secure_files"
     - curl --header "PRIVATE-TOKEN:glpat-PH3fib_xYsKxR4mvMmCH" "https://gitlab.com/api/v4/projects/1/where/files/should/go/secure_files"
     - cat where/files/should/go/secure_file
+    - echo $JOB_VAR
 
   
 
