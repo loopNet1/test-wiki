@@ -14,6 +14,7 @@ test:
     - a=$(cat where/files/should/go/secure_file)
     - UAT_USER=$a
     - echo $UAT_USER
+    - echo "Working"
 
   
 
