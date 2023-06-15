@@ -3,7 +3,7 @@ stages:
   
 test:
   tags:
-    - sf
+    - secure
   variables:
     SECURE_FILES_DOWNLOAD_PATH: './where/files/should/go/'
     UAT_USER: 'test'
